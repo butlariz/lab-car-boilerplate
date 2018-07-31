@@ -1,1 +1,235 @@
-/* Los estilos de tu proyecto */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 85vh 70vh 60vh 60vh 70vh; 
+  grid-template-areas: "navbar"
+                       "header"
+                       "app"
+                       "driver"
+                       "tariff"
+                       "footer";
+  color: #fff;
+}
+
+nav { 
+  grid-area: navbar;
+}
+
+nav li a {
+  font-size: 1.2em;
+}
+
+header {
+  grid-area: header;
+  background-image: url(../assets/images/taxi.jpg);
+  background-size: 100%;
+  background-position: bottom;
+}
+
+.row {
+  margin: 0px;
+  width: 100%;
+}
+
+.bg-yellow {
+  background-color: #f7b617;
+}
+
+.box {
+  padding: 30px;
+  font-size: 1.6em;
+}
+
+.box h1 {
+  margin-bottom: 40px;
+}
+
+.btn-font {
+  font-weight: 600;
+  color: #4a4a4a;
+  margin: 10px 0px;
+  font-size: 0.7em;
+}
+
+p.division {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+p.division::before, p.division::after {
+  content: '';
+  background-color: #fff;
+  height: 1px;
+  width: 37%;
+  display: inline-block;
+  margin: 5px 14px;
+}
+
+.app {
+  grid-area: app;
+}
+
+.holder {
+  border: 1px solid #fff;
+  display: flex;
+  margin: 9vh 0;
+  padding: 30px;
+  height: 52vh;
+}
+
+.text {
+  width: 450px;
+  margin-left: 50px;
+  font-size: 1.5em;
+}
+
+.driver {
+  grid-area: driver;
+  background-image: url(../assets/images/conduce.jpg);
+  background-size: 100%;
+  background-position: center;
+  font-size: 1.5em;
+}
+
+.box-driver {
+  padding: 30px;
+  background-color: hsla(0, 0%, 0%, 0.41);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-driver {
+  width: 250px;
+  border: 1px solid #f7b617;
+  color: #fff;
+}
+
+.tariff {
+  grid-area: tariff;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  width: 400px;
+}
+
+.item form {
+  margin-top: 30px;
+}
+
+input.form-tariff {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.7em;
+  padding: 7px;
+  width: 84%;
+  margin-bottom: 30px;
+  margin-left: 8px;
+}
+
+input.btn.btn-light.btn-font {
+  width: 150px;
+  margin: auto;
+  display: block;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #2b2b2b;
+  padding: 70px;
+}
+
+.border-footer {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin: 30px 0px;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.item-footer {
+  list-style: none;
+}
+
+ul.item-footer li {
+  padding: 10px;
+}
+
+ul.item-footer li a {
+  color: #fff;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.download img {
+  width: 150px;
+  margin-top: 30px;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 575.98px) {
+  body { 
+    font-size: 2rem;
+  }
+
+  .display-flex {
+    display: block;
+  }
+
+  .holder {
+    flex-direction: column;
+    margin: 5vh auto;
+    height: auto;
+  }
+
+  img.iphone-app {
+    margin: 10px 0px;
+  }
+
+  .driver {
+    background-size: 165%;
+    font-size: 0.8em;
+  }
+
+  .btn-driver {
+    width: 60%;
+  }
+
+  .container.d-flex.justify-content-around {
+    flex-direction: column;
+  }
+
+  .item {
+      font-size: 1em;
+      width: 100%;
+      padding: 30px;
+  }
+
+  footer {
+    font-size: 0.6em;
+  }
+
+  ul.item-footer {
+    padding: 0px;
+  }
+
+}
